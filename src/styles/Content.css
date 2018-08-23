@@ -1,0 +1,7 @@
+.overload {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(150, 150, 150, 0.76);
+}

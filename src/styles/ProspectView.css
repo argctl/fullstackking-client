@@ -1,0 +1,71 @@
+.prospectView{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.welcomeView{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    background: url("../images/opac14ss.png");
+    /* opacity: 0.3; */
+    color: rgb(28, 17, 104);
+    min-height:  100vh;
+    padding: 40px;
+
+
+}
+.infoBox{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.MainPane{
+    flex-basis: 50vw;
+}
+.infoBox > * {
+    background-color: rgba(126, 87, 14, .4);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    flex-grow:1;
+    max-width: 100%;
+
+}
+.test{
+    /* transform: translateX(); */
+}
+.better-enter{
+    opacity: 0.01;
+    /* tranform: translateX(0%); */
+}
+.better-exit{
+    opacity: 1;
+    /* transform: translateX(100%); */
+}
+.better-enter-active{
+    opacity: 1;
+    /* tranform: translateX(100%); */
+    transition: all 400ms ease-in;
+}
+.better-exit-active{
+    opacity: 0.01;
+    /* tranform: translateX(0%); */
+    transition: all 400ms ease-out;
+}
+
+/* .backgroundImg{
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+
+} */

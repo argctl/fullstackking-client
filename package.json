@@ -1,0 +1,26 @@
+{
+  "name": "fullstackking-client",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "jwt-decode": "^2.2.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-stripe-elements": "^1.6.0",
+    "react-transition-group": "^2.3.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.2.0",
+    "socket.io-client": "^2.1.0"
+  },
+  "proxy": "http://localhost:8081",
+  "scripts": {
+    "start": "REACT_APP_URL=http://localhost:8081 REACT_APP_STRIPE_API=pk_test_NY7gOwACZyo5bsI6WTROTUMN react-scripts start",
+    "build": "REACT_APP_URL=https://www.fullstackking.com REACT_APP_STRIPE_API=pk_live_5vD50abvHNAEmmdSGuFfUsjq react-scripts build",
+    "dev": "REACT_APP_URL=http://localhost:8081 REACT_APP_STRIPE_API=pk_test_NY7gOwACZyo5bsI6WTROTUMN react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

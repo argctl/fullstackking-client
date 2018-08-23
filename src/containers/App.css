@@ -1,0 +1,13 @@
+.App {
+  overflow: hidden;
+  max-width: 50vw;
+}
+
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body > *{
+    max-width: 100%;
+    overflow-x: hidden;
+}

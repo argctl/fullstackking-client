@@ -1,0 +1,129 @@
+.jobListView{
+
+
+
+
+
+    list-style-type: none;
+    background-color: rgba(175, 182, 110, .7);
+    padding: 1em;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-collapse: collapse;
+    max-width: 90vw;
+}
+.jobVeri{
+    font-size: 1.1rem;
+    background: #afb66eff;
+    color: white;
+}
+.jobItem{
+
+    padding: 20px;
+    margin: 20px;
+    background-color: inherit;
+    margin-left: 0;
+    margin-right: 0;
+    color: rgba(96, 96, 96, 1);
+    cursor: pointer;
+
+}
+.jobInactive{
+    background-color: grey;
+}
+
+.numberBids{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.jobItem:hover{
+    background-color: rgba(175, 182, 188, .5);
+    color: white;
+
+}
+#jobListPageCont {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    flex-direction: column;
+    text-align: center;
+
+
+}
+.jobStack {
+    text-align: center;
+
+}
+.stackOptions{
+    font-size: 1rem;
+    color: rgba(28, 17, 104, 1)
+}
+/*
+the title field is maxed at 51 characters and has a minimum of 10.
+I may limit the user to 20 for the ui and send a flag if it somehow gets to the
+server over 20.
+*/
+.jobTitle{
+    text-align: left;
+    max-width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tbodyFlex{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.searchCont{
+    all: unset;
+    display: flex;
+    align-self: center;
+
+
+}
+.searchBtn{
+    height: 60px;
+}
+.newBid{
+    float:right;
+    width: 90px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* @media screen and (max-width: 600px){
+.jobTitle{
+    max-width: 100px;
+}
+th,td {
+    padding: 1px;
+
+
+}
+.jobListView{
+
+    max-width: 100vw;
+}
+.jobListView *{
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+
+.jobListPageCont{
+    max-width: 100vw;
+    margin: 0;
+    padding:0;
+    flex-direction: column;
+}
+} */

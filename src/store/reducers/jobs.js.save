@@ -1,0 +1,15 @@
+
+
+export function jobReducer(state=null, action){
+    switch(action.type){
+        case "GET_JOBS":
+            return {...state, jobs: action.jobs};
+        case "GET_SINGLE_JOB
+		console.log(action.jobInfo);
+            return {...state, selectJob: action.jobInfo};
+        case "ADD_JOB":
+            return {...state, jobs:[...state.jobs, action.job]};
+        default:
+            return state;
+    }
+}

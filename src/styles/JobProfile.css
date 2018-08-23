@@ -1,0 +1,223 @@
+.outerJobProfileCont{
+    text-align: center;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.JobProfile{
+    color: rgba(96, 96, 96, 1);
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+.bidAmount{
+    color: green;
+}
+.bidform{
+    align-self: center;
+    position:fixed;
+    right: -350px;
+    background-color: rgba(175, 182, 110, 1);
+    /* opacity: 0; */
+}
+
+.paraDesc{
+    margin: 12px;
+
+}
+.jobDescription{
+
+}
+.textAreaPara{
+    font-size: 1rem;
+    width: 100%;
+    vertical-align: top;
+    position: relative;
+    width: 80vw;
+
+}
+.bidSection{
+    list-style-type: none;
+
+}
+.uniqueBid{
+    margin: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 227, 193, .7);
+}
+.bidHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.techTable{
+    align-self: flex-start;
+    border-style: solid;
+    border-color: grey;
+    border-collapse: collapse;
+    margin-top: 20px;
+    float: left;
+
+
+}
+.overrideForm{
+    background-color: rgba(175, 182, 110, 1);
+    z-index: 4;
+}
+/* .jobTitle{
+    transform: scale(1.2);
+    transition: all 500ms ease-in;
+} */
+.techTable > th, td{
+    border-color: grey;
+    border-style: solid;
+}
+
+.techTable td:nth-child(even) {
+    background-color: #dddddd;
+}
+.techTable th:nth-child(even) {
+    background-color: #dddddd;
+}
+.bidButton{
+    align-self: flex-end;
+    margin-right: 20%;
+}
+.owner > * {
+    cursor: pointer;
+}
+textarea{
+    font-size: 1.2rem;
+}
+.techTable input{
+    font-size: 1rem;
+    padding: 0;
+}
+.postedBy{
+    cursor: not-allowed;
+}
+@media screen and (max-width: 600px){
+    .jobTitle{
+        align-self: flex-start;
+        max-width: 100%;
+
+    }
+    .JobProfile{
+
+        margin-left: 0;
+        margin-right: 0;
+
+
+
+    }
+}
+
+.bidAccepted{
+    position: fixed;
+    top: 1px;
+    background-color: green;
+    padding: 4em;
+    color: white;
+}
+
+.accept-enter{
+    opacity: 0.01;
+    transform: translateY(-50%);
+}
+.accept-exit{
+ opacity: 1;
+ transform: translateY(0%);
+}
+.accept-enter-active{
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 500ms ease-out;
+}
+.accept-exit-active{
+    opacity: 0.01;
+    transform: translateY(-50%);
+    transition: all 500ms ease-in;
+}
+
+.show{
+    /* animation-name: showBox;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; */
+    transition: right, .5s;
+    right: 2px;
+}
+.hide{
+    /* animation-name: hideBox;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode:  forwards; */
+    transition: right .5s;
+    right: -350px;
+}
+.bid-enter{
+    opacity: 0.01;
+    transform: translateX(100%);
+}
+.bid-exit{
+    opacity: 1;
+    transform: translateX(0%);
+}
+.bid-enter-active{
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 500ms ease-in;
+}
+.bid-exit-active{
+    opacity: 0.01;
+    transform: translateX(100%);
+    transition: all 500ms ease-out;
+}
+.init-enter{
+    opacity: 0.01;
+    transform: translateX(20%);
+}
+
+.init-exit{
+    opacity: 1;
+    transform: translateX(0%);
+}
+.init-enter-active{
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 200ms ease-in;
+}
+.init-exit-active{
+    opacity: 0.01;
+    transform: translateX(20%);
+    transition: all 200ms ease-out;
+}
+
+/* @keyframes hideBox {
+    0%{
+        opacity: 1;
+
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes showBox{
+    0%{
+
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+
+    }
+} */

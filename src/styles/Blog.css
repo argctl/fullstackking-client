@@ -1,0 +1,15 @@
+.blogCont{
+    margin: 50px;
+}
+.blogPost{
+    text-align: justify;
+    margin: 0 20%;
+    padding: 2em;
+    background-color: rgba(229, 227, 232, .5);
+}
+
+@media screen and (max-width: 1850px){
+    .blogPost{
+        margin: 0 10%;
+    }
+}

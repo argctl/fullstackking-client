@@ -1,0 +1,87 @@
+.MessageSessions{
+    background-color: rgba(175, 182, 110, .2);
+    display: flex;
+    padding-left: 0px;
+    flex-direction: column;
+
+}
+.messageSessionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    padding: 1em;
+    padding-left: 0px;
+    margin-top:4px;
+    max-height: 40px;
+    cursor: pointer;
+
+}
+
+.messageSessionItem:hover{
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+    padding: .9em;
+}
+.textMessageSession {
+    /* overflow: scroll; */
+    padding-left: 10px;
+    /* position: relative; */
+    overflow: hidden;
+}
+.imagePinMessageSesion {
+    padding-right: 30px;
+    height: 30px;
+    width: auto;
+    max-width: 60px;
+
+}
+.newMessageText{
+    width: 300px;
+    height: 100px;
+}
+.messageForm{
+    display: flex;
+    justify-content: center;
+}
+.possibleUsersInContact{
+    list-style-type: none;
+}
+.userInContactItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    width: 300px;
+}
+
+.newMessageFormEle{
+    display: flex;
+    background-color: rgba(175, 182, 110, .2);
+    justify-content: space-around;
+    margin-left: 40%;
+}
+.newMessageFormEle > *{
+    padding:0;
+    margin: 0;
+    width:inherit;
+}
+
+.messageSendBtn{
+    padding:10px;
+
+}
+.messageAndButton{
+    display: flex;
+}
+.dateMessageSession{
+    align-self: flex-end;
+    float: right;
+}
+
+@media screen and (max-width: 600px){
+    .newMessageFormEle{
+        width:100vw;
+        margin:0;
+        padding:0;
+    }
+}

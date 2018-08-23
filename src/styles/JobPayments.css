@@ -1,0 +1,68 @@
+.paymentsCont{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-shadow: 2px 2px 4px rgba(150, 150, 150, 0.76);
+}
+
+.paymentsCont ol{
+    counter-reset: li;
+    text-align: left;
+    width: 800px;
+    max-width: 80vw;
+    list-style-type: none;
+
+}
+.paymentsCont ol li{
+    position: relative;
+}
+.paymentsCont ol li:before{
+    content: counter(li)'.';
+    counter-increment: li;
+    position:absolute;
+    right:100%;
+    margin-right:0.5em;
+}
+.amountCont{
+    color: green;
+}
+.paymentsCont h2{
+    text-shadow: 1px 1px 1px rgb(28, 17, 104);
+}
+
+.fauxLink a{
+     color: green;
+     text-decoration: underline;
+     cursor:pointer;
+
+  }
+.fauxLink a:hover{
+     text-decoration: overline;
+ }
+ .pop_up{
+     background-color: rgba(255, 227, 193, .7);
+     padding: 20px;
+     border-radius: 10px;
+ }
+
+.info-enter{
+    opacity: 0.01;
+    transform: translateY(100%);
+}
+.info-exit{
+    opacity: 1;
+    transform: translateX(0%);
+}
+.info-enter-active{
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 200ms ease-in;
+}
+.info-exit-active{
+    opacity: 0.01;
+    transform: translateX(100%);
+    transition: all 200ms ease-in;
+}

@@ -1,0 +1,38 @@
+
+.upDownCont{
+    display: flex;
+    justify-content: space-space-between;
+}
+.upDownCont * {
+    font-size: 4em;
+    flex-basis: 50%;
+    margin-bottom: 0;
+}
+.goodJob{
+color: green;
+transition: 400ms ease-in;
+}
+.badJob{
+    color: red;
+    transition: 400ms ease-out;
+}
+.goodJob:hover{
+    border-color: green;
+    background-color: rgba(137, 255, 20, .45);
+}
+.badJob:hover{
+    border-color: red;
+    background-color: rgba(253, 6, 43, .45);
+}
+.fakeLink{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+.fakeLink:hover{
+    color:purple;
+}
+.whyMessage{
+    position: fixed;
+    background-color:lightgreen;
+}

@@ -1,0 +1,133 @@
+.profilePic{
+    height: 200px;
+    width:auto;
+    margin: 20px;
+
+}
+.profileCont{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100vw;
+}
+.profileItem{
+
+margin: 30px;
+}
+.over{
+
+}
+.username {
+    cursor:not-allowed;
+    user-select: none;
+}
+.email {
+    cursor: not-allowed;
+    user-select: none;
+}
+.visiText {
+    font-size: .9rem;
+    border-color: "grey";
+    border-style: solid;
+}
+
+
+.editable {
+    cursor: pointer;
+}
+.Bio{
+    /* background-color: gold; */
+    flex-basis: 300px;
+    overflow: auto;
+
+
+}
+.basicInfo > * {
+    padding: 10px;
+}
+.basicInfo{
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+
+}
+.bioInfo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 50vw;
+    max-width: 100vw;
+
+
+}
+.imgForm{
+    position: fixed;
+    top: 0;
+    background-color: rgba(175, 182, 110, .9);
+}
+.imgForm *{
+    opacity: .9;
+}
+.upload-enter{
+    opacity: 0.01;
+    transform: scale(0.7) translateX(-50%);
+}
+.upload-exit{
+    opacity: 1;
+    transform: scale(1) translateX(0%);
+}
+.upload-enter-active{
+    opacity: 1;
+    transform: scale(1) translateX(0%);
+    transition: all 400ms ease-out;
+}
+.upload-exit-active{
+    opacity: 0.01;
+    transform: scale(0.7) translateX(-50%);
+    transition: all 400ms ease-in;
+}
+
+.review{
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.bioInfo input{
+    padding: 0px;
+    font-size: 1em;
+    margin:0;
+    max-width: 150px;
+    max-height: 50px;
+    text-align: center;
+
+}
+.ActivityFeed{
+    display: flex;
+    flex-direction:column;
+
+}
+.ActivityFeed > li {
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(175, 182, 188, .7);
+    box-shadow: 1px 5px 17px 0px rgba(28, 17, 104, .75);
+}
+.aLink {
+    color: rgba(28, 17, 104, 1);
+    text-shadow: 1px 5px 17px 0px rgba(28, 17, 104, .75);
+}
+.aLink:hover {
+    font-size: .998rem;
+    color: blue;
+}
+
+@media screen and (max-width: 800px){
+    .bioInfo{
+
+        margin: 0;
+        padding: 0;
+    }
+
+}

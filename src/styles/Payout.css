@@ -1,0 +1,24 @@
+form{
+    text-align: center;
+    display: flex;
+}
+form * {
+    max-width: 100%;
+}
+.paymentBlock *{
+    max-width: 100%;
+}
+.paymentCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+
+}
+.xcont {
+    float: left;
+}
+.payoutForm {
+    width: 400px;
+}

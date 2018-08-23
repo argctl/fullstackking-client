@@ -1,0 +1,26 @@
+.Status{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.Status * {
+    padding: 20px;
+}
+.pop_up{
+    display: flex;
+    max-width: 150px;
+
+}
+.pop_up * {
+    color: green;
+    border-color: green;
+    cursor: pointer;
+    padding: 5px;
+}
+.x{
+    align-self: flex-start;
+    padding: 4px;
+    margin-right: 5px;
+    border-color: red;
+    font-size: 1.1em;
+}
