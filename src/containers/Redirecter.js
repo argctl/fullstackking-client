@@ -11,9 +11,7 @@ class Redirecter extends Component{
     loggedIn(){
         this.props.history.push("/account");
     }
-    loggedOut(){    //needs to be fixed to look at from pathname. 
-        this.props.location.pathname.split("/")[1] !== "account" ?
-        this.props.history.push("/onboarding/signin") :
+    loggedOut(){    //needs to be fixed to look at from pathname.
         this.props.history.push("/onboarding");
     }
     render(){

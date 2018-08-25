@@ -85,7 +85,7 @@ export function jwtHandler(){
 export function getUser(data, sign = "signin"){
     let body = JSON.stringify(data);
     return (dispatch)=>{
-        fetch(`http://localhost:8081/${sign}`,
+        fetch(`${process.env.REACT_APP_URL}/${sign}`,
         {
             method: "post",
             headers: {

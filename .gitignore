@@ -5,3 +5,4 @@ images/
 public/favicon.ico
 src/images
 src/logo.svg
+build/
