@@ -43,7 +43,7 @@ class Blog extends Component{
                     return(
                         <div className="blogPost" key={index}>
                         <h3> {title} </h3>
-                        <p> {date} </p>
+                        <p> {date.toLocaleString()} </p>
                         <div> {content.map((para,index)=>(<p key={index}>{para}</p>))} </div>
                         </div>
                     )
