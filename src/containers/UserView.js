@@ -43,7 +43,7 @@ class UserView extends Component {
         const {getJobs, selectJob, searchJobs, userContextJobs,
                jobViewInfo, user, users, jobPayment, data, changeHiddenItems,
                 messages, jobPage, updateProfile, getProfile, addBid, updateJob,
-                completeJob, createJob, updateUserProfileData, deactivateJob} = this.props;
+                completeJob, createJob, updateUserProfileData, deactivateJob, deleteBid} = this.props;
 
         return(
             <Switch>

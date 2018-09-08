@@ -68,6 +68,9 @@
 
 }
 .overrideForm{
+    position: fixed;
+    right: 0px;
+    top: 10vh;
     background-color: rgba(175, 182, 110, 1);
     z-index: 4;
 }
@@ -104,6 +107,10 @@ textarea{
     cursor: not-allowed;
 }
 @media screen and (max-width: 600px){
+    .bidHeader{
+        display: flex;
+        flex-direction: column;
+    }
     .jobTitle{
         align-self: flex-start;
         max-width: 100%;
@@ -116,6 +123,20 @@ textarea{
 
 
 
+    }
+    .jobDescription{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .overrideForm{
+        position:absolute;
+        top: -100px;
+        width: 90vw;
+        /* height: 110vh; */
+    }
+    .techTable{
+        align-self: center;
     }
 }
 

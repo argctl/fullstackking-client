@@ -59,7 +59,10 @@ class Navigation extends Component{
         });
     }
     testMobile(){
+        if(window.innerWidth !== this.width){
         window.innerWidth > 1850 ? this.setState({toggle: true, override: false}) : this.setState({toggle: false, override: true});
+        this.width = window.innerWidth;
+    }
 
     }
     hidePops(){

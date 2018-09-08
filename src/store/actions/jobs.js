@@ -89,7 +89,6 @@ export function deactivateJob(job_id){
 export function deleteBid(bid_id){
     return (dispatch) =>{
         let result = dispatch(postAuthInfo("/delete/bid", {bid_id}, "delete"));
-
         result.then((item)=>{
             dispatch(removeBid(item.removed_bid));
         }).catch((err)=>{

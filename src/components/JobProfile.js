@@ -15,10 +15,10 @@ import "../styles/JobProfile.css";
 const BidForm = ({change, title, description, check, clickM, messageR, submit, back, front, amount, err, toggleCheck}) => {
 
     return(
-        (<form style={{position: "fixed", right: "0px", top: "10vh"}} onSubmit={submit} className="overrideForm">
+        (<form onSubmit={submit} className="overrideForm">
             {err && <div className="errorBox">Please fill out all fields and make sure the description is at least 50 characters!</div>}
             <button onClick={clickM}><div style={{textAlign: "right"}}>close X</div></button>
-            <input name="bidTitle" onChange={change} value={title}
+            <input autoFocus name="bidTitle" onChange={change} value={title}
                  placeholder="title" type="text"/>
 
                 <label>
@@ -43,7 +43,7 @@ const BidForm = ({change, title, description, check, clickM, messageR, submit, b
 }
 
 
-const Bids = ({bids, isOwner, selectBid, accepted_bid, user_id, delete_bid_function}) =>{
+const Bids = ({bids, isOwner, selectBid, accepted_bid, user_id, deleteBid}) =>{
     const index = bids.findIndex((bid)=>{
         return bid._id === accepted_bid;
     });
@@ -63,7 +63,9 @@ const Bids = ({bids, isOwner, selectBid, accepted_bid, user_id, delete_bid_funct
                     <div>
                         {bid.user.username ? bid.user.username : "You, just now"}
                     </div>
-                {(bid.user._id === user_id && accepted_bid+"" !== bid._id+"") && <button onClick={()=>{delete_bid_function(bid._id)}}>delete bid</button>}
+                {(bid.user._id === user_id && accepted_bid+"" !== bid._id+"") && <button style={{cursor: "pointer", alignSelf: "center"}} onClick={()=>{
+                    deleteBid(bid._id)
+                }}>delete bid</button>}
                     <div>
                         front: {bid.front} <br/> back: {bid.back}
                     </div>
@@ -127,9 +129,10 @@ class JobProfile extends Component{
         this.toggleBidForm = this.toggleBidForm.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.selectedBid = this.selectedBid.bind(this);
-        this.deleteBid = this.deleteBid.bind(this);
+        // this.deleteBid = this.deleteBid.bind(this);
     }
     componentDidMount(){
+
 
         setTimeout(()=>{
             this.setState({loaded: true});
@@ -139,11 +142,11 @@ class JobProfile extends Component{
         this.props.getJob(this.props.location.pathname.split("/")[3]);
 
     }
-    deleteBid(_id){
-        this.setState({delete_bid: _id});
-        this.props.deleteBid(_id);
-
-    }
+    // deleteBid(_id){
+    //     // this.setState({delete_bid: _id});
+    //     this.props.deleteBid(_id);
+    //
+    // }
     selectedBid(_id){
             this.setState({selectedBid: _id});
             this.props.acceptBid(_id).then((session)=>{
@@ -356,7 +359,7 @@ class JobProfile extends Component{
             {(isOwner && accepted_bid && !completed) && <button onClick={(e)=>{this.closeJob(e, selectJob)}}>Complete Job</button>}
             {isOwner && <div>Click "Accept Bid" next to the amount to accept a bid</div>}</div> : <div>loading...</div>}
 
-                {(!!selectJob && bids.length > 0) && <Bids delete_bid_function={this.deleteBid} user_id={this.state.user_id} isOwner={isOwner} bids={bids} selectBid={this.selectedBid} accepted_bid={accepted_bid} />}
+                {(!!selectJob && bids.length > 0) && <Bids deleteBid={this.props.deleteBid} user_id={this.state.user_id} isOwner={isOwner} bids={bids} selectBid={this.selectedBid} accepted_bid={accepted_bid} />}
 
 
             </div>;
