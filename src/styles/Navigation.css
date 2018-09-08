@@ -296,7 +296,18 @@ padding: 0;
     .helpLink{
         display: none;
     }
-
+    .searchBar{
+        position:absolute;
+        top: 0px;
+        left: 0vw;
+        z-index: 3;
+        /* max-width: 80vw; */
+        /* background-color: #afb66eff; */
+        background-color: rgba(175,182,110, .9);
+    }
+    .searchResultBox{
+        max-width: 80vw;
+    }
 }
 @keyframes bounce{
     from{
