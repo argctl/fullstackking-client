@@ -60,7 +60,10 @@ class Navigation extends Component{
     }
     testMobile(){
         if(window.innerWidth !== this.width){
-        window.innerWidth > 1850 ? this.setState({toggle: true, override: false}) : this.setState({toggle: false, override: true});
+        setTimeout(()=>{
+            window.innerWidth > 1850 ? this.setState({toggle: true, override: false}) : this.setState({toggle: false, override: true});
+
+        }, 1000)
         this.width = window.innerWidth;
     }
 
