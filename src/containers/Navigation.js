@@ -152,14 +152,10 @@ class Navigation extends Component{
 
         const narray = this.sortNotifs(joined_notifs);
         const {toggle, override, time} = this.state;
-        console.info({toggle});
-        console.log({override});
         if(false || !!document.documentMode){
-            console.log(document.body.classList);
            (toggle && override) && document.body.classList.add('lockVert');
            !(toggle && override) && document.body.classList.remove('lockVert')
         }else{
-            console.log(document.body.classList);
             document.body.classList.toggle('lockVert', toggle && override);
         }
         const fs = override ? "1rem" : "1.4rem";
