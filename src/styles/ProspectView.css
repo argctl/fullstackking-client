@@ -21,9 +21,15 @@
 
 
 }
+.welcomeView > * {
+    max-width: 100vw;
+}
 .infoBox{
-    display: flex;
+    display:  flex;
+    /* flex: 1 0 auto; */
     flex-wrap: wrap;
+    white-space: normal;
+    max-width: 100vw;
 
 }
 .MainPane{
@@ -35,12 +41,15 @@
     padding: 30px;
     border-radius: 10px;
     flex-grow:1;
-    max-width: 100%;
+    
+    max-width: 100vw;
+
+
 
 }
-.test{
-    /* transform: translateX(); */
-}
+/* .test{
+    transform: translateX();
+} */
 .better-enter{
     opacity: 0.01;
     /* tranform: translateX(0%); */

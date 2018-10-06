@@ -119,6 +119,7 @@ nav a{
     top: 130px;
     /* height: 75px; */
     width: auto;
+    /* max-width: 100%; */
 
 
     animation-name: bounce;
@@ -249,9 +250,11 @@ padding: 0;
         right: 60px; */
         /* width: 5em; */
         top: 4em;
+        left: 0;
         width: 100vw;
         height: 100vh;
         text-align: center;
+        z-index: 4;
     }
     .allNav *{
         margin:0;
